@@ -4,26 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:id="@+id/llItem">
+    android:id="@+id/llItem"
+    android:backgroundTint="#00296f"
+    >
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:background="#616161"
-        android:orientation="vertical">
+        android:background="@drawable/edit_salvar"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modelo"
+            android:textColor="#E91E63"/>
+
         <TextView
             android:id="@+id/tvNome"
-            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome contato: Teste"/>
+            android:text="Supra"
+            android:textSize="20dp"
+
+            android:textColor="#03A9F4" />
+
+        <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Placa"
+            android:textColor="#E91E63"/>
+
         <TextView
             android:id="@+id/tvTelefone"
-            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefone contato: Teste"/>
+            android:text="JON6969"
+            android:textSize="20dp"
+            android:textColor="#2196F3" />
+
 
     </LinearLayout>
 

@@ -2,12 +2,13 @@ package com.everis.listadecontatos.feature.contato
 
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.everis.listadecontatos.R
 import com.everis.listadecontatos.application.ContatoApplication
 import com.everis.listadecontatos.bases.BaseActivity
 import com.everis.listadecontatos.feature.listacontatos.model.ContatosVO
 import kotlinx.android.synthetic.main.activity_contato.*
-import kotlinx.android.synthetic.main.activity_contato.toolBar
+//import kotlinx.android.synthetic.main.activity_contato.toolBar
 
 class ContatoActivity : BaseActivity() {
 
@@ -16,7 +17,7 @@ class ContatoActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contato)
-        setupToolBar(toolBar, "Contato",true)
+       // setupToolBar(toolBar, "Contato",true)
         setupContato()
         btnSalvarConato.setOnClickListener { onClickSalvarContato() }
     }
@@ -41,6 +42,14 @@ class ContatoActivity : BaseActivity() {
     }
 
     private fun onClickSalvarContato(){
+        val builder = AlertDialog.Builder(this)
+        if (etNome.text.isEmpty()){ builder.setTitle("ATENÇÃO")
+            builder.setMessage("Voçê tem que preencher os campos")
+            builder.show()}
+
+        if (etTelefone.text.isEmpty()){ builder.setTitle("ATENÇÃO")
+            builder.setMessage("Voçê tem que preencher os campos")
+            builder.show()}else{
         val nome = etNome.text.toString()
         val telefone = etTelefone.text.toString()
         val contato = ContatosVO(
@@ -60,7 +69,7 @@ class ContatoActivity : BaseActivity() {
                 progress.visibility = View.GONE
                 finish()
             }
-        }).start()
+        }).start()}
     }
 
     fun onClickExcluirContato(view: View) {
