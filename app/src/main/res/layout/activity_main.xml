@@ -5,18 +5,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
+    android:background="@drawable/gradiente_fundo"
     android:forceDarkAllowed="false"
+    tools:context=".MainActivity"
+
+
    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_marginLeft="16dp"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+
+
+            android:text="Tarefas"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
         <androidx.appcompat.widget.Toolbar
 
             android:id="@+id/toolBar"
-            android:backgroundTint="#2196F3"
+            android:backgroundTint="#042196F3"
 
             android:layout_width="358dp"
             android:layout_height="0dp"
@@ -27,10 +42,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="0dp"
 
             android:background="@drawable/edit_salvar"
-            android:padding="5dp">
+            android:padding="0dp">
 
             <EditText
                 android:id="@+id/etBuscar"
@@ -39,20 +54,24 @@
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:backgroundTint="#673AB7"
+                android:visibility="gone"
 
                 android:hint="Pesquisar"
                 android:inputType="textAutoComplete"
-                android:textColor="#FFFFFF" />
+                android:textColor="#0D00B0FF" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:visibility="gone"
 
                 android:textColor="#ffff" />
 
             <ImageView
                 android:id="@+id/ivBuscar"
+
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -68,7 +87,7 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2196F3" />
+                android:background="@drawable/gradiente_fundo" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -78,6 +97,16 @@
                 android:layout_margin="16dp"
                 android:tint="#FFFFFF"
                 android:src="@android:drawable/ic_input_add"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="200sp"
+                android:layout_height="wrap_content"
+                android:text="):" />
+
         </FrameLayout>
 
     </LinearLayout>

@@ -21,12 +21,15 @@ import java.util.*
 class MainActivity : BaseActivity() {
 
 
+
+
+
     private var adapter: ContatoAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setupToolBar(toolBar, "Veiculos", false)
+        setupToolBar(toolBar, "Lista", false)
         setupListView()
         setupOnClicks()
     }
@@ -59,20 +62,35 @@ class MainActivity : BaseActivity() {
     private fun onClickBuscar() {
         val busca = etBuscar.text.toString()
         progress.visibility = View.VISIBLE
+
+        var listvise: List<ContatosVO> = mutableListOf()
+
+
+
+
+
+
         Thread(Runnable {
             Thread.sleep(1500)
             var listaFiltrada: List<ContatosVO> = mutableListOf()
+
+
+
             try {
                 listaFiltrada =
                     ContatoApplication.instance.helperDB?.buscarContatos(busca) ?: mutableListOf()
             } catch (ex: Exception) {
                 ex.printStackTrace()
+
             }
             runOnUiThread {
                 adapter = ContatoAdapter(this, listaFiltrada) { onClickItemRecyclerView(it) }
                 recyclerView.adapter = adapter
                 progress.visibility = View.GONE
+
+
                 Toast.makeText(this, "Buscando por $busca", Toast.LENGTH_SHORT).show()
+
             }
         }).start()
     }

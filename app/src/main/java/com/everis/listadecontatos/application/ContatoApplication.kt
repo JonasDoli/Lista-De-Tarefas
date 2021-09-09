@@ -5,6 +5,7 @@ import com.everis.listadecontatos.helpers.HelperDB
 
 class ContatoApplication : Application() {
 
+
     var helperDB: HelperDB? = null
         private set
 
@@ -17,4 +18,5 @@ class ContatoApplication : Application() {
         instance = this
         helperDB = HelperDB(this)
     }
+
 }
