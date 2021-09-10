@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:background="@android:drawable/divider_horizontal_bright"
+    android:background="?attr/actionBarDivider"
 
     android:id="@+id/llItem"
 
@@ -14,11 +14,11 @@
 
 
     <LinearLayout
-        android:layout_width="345dp"
-        android:layout_height="228dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:background="@drawable/botao_persona"
+        android:background="@drawable/edit_salvar"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -27,8 +27,31 @@
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="Tarefa"
-            android:textColor="#FFAB00"
-            android:textSize="20sp" />
+            android:textStyle="bold"
+            android:textColor="#304FFE"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+
+            android:fontFamily="casual"
+
+            android:text="15/12/2021"
+            android:textColor="#00B8D4"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Data"
+            android:textStyle="bold"
+            android:textColor="#304FFE"
+            android:textSize="15sp
+" />
 
         <TextView
             android:id="@+id/tvNome"
@@ -36,35 +59,18 @@
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="Passear com o cachorro"
-            android:textColor="#3FF403"
-
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="Data"
-            android:textColor="#FFAB00"
-            android:textSize="20sp
-" />
-
-        <TextView
-            android:id="@+id/tvData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="15/12/2021"
-            android:textColor="#3FF403"
-            android:textSize="20dp" />
+            android:textColor="#00B8D4"
+            android:textStyle="bold"
+            android:textSize="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="Hora"
-            android:textColor="#FFAB00"
-            android:textSize="20sp
+            android:textStyle="bold"
+            android:textColor="#304FFE"
+            android:textSize="15sp
 " />
 
         <TextView
@@ -73,8 +79,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="casual"
             android:text="10:00"
-            android:textColor="#3FF403"
-            android:textSize="20dp" />
+            android:textStyle="bold"
+            android:textColor="#00B8D4"
+            android:textSize="15dp" />
 
 
     </LinearLayout>

@@ -53,7 +53,7 @@ class HelperDB(
             where = "$COLUMNS_NOME LIKE ?"
             args = arrayOf("%$busca%")
         }
-        var cursor = db.query(TABLE_NAME, null, where, args, null, null, null)
+        var cursor = db.query(TABLE_NAME, null, where, args, null, null, null )
         if (cursor == null) {
             db.close()
             return mutableListOf()
